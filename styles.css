@@ -8,6 +8,7 @@ body {
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
   font-style: normal;
+  color: #252525;
 }
 
 /* Header and Navigation */
@@ -111,7 +112,7 @@ section h2 {
 }
 
 .black-section {
-  background-color: black;
+  background-color: #252525;
   color: white;
 }
 
