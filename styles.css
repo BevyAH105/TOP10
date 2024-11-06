@@ -120,6 +120,12 @@ section h2 {
   animation: color-switch 300ms infinite alternate;
 }
 
+.hero-title {
+  rotate: 2deg;
+  text-align: center;
+  animation: bobbing 4s infinite alternate-reverse;
+}
+
 /* Album Art */
 .album-art {
   display: flex;
