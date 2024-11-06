@@ -205,4 +205,11 @@ footer {
     padding-right: 20px;
     padding-top: 20px;
   }
+  .logo::after {
+    content: "TOP10";
+  }
+  .logo:hover::before {
+    content: "TEN10";
+    animation: none;
+  }
 }
