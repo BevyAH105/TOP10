@@ -1,50 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=IBM+Plex+Sans&display=swap");
 
-html {
-  margin: 0;
-  padding: 0;
-}
-
+/* Reset and Global Styles */
+html,
 body {
   margin: 0;
   padding: 0;
-
   font-family: "IBM Plex Sans", serif;
   font-weight: 400;
   font-style: normal;
 }
-.logo {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  font-size: 5em;
-  content: "TOP10";
-  color: #fff;
-  mix-blend-mode: difference;
+
+@media screen and (max-width: 500px) {
+  .logo {
+    font-size: 2.8em;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
 }
 
-.separate {
-  height: 5em;
-  background: #f000d0;
-  background: linear-gradient(
-    171deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(240, 0, 208, 1) 100%
-  );
-}
-
-p {
-  font-size: 1.2em;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-
-  padding: 0 2em;
-}
-
+/* Header and Navigation */
 .nav-container {
   display: flex;
   justify-content: center;
@@ -53,6 +27,14 @@ nav {
   background-position-y: -700px;
   height: 100px;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 0 2em;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -73,20 +55,42 @@ nav ul {
   color: #fff;
 }
 
-h2 {
-  margin-top: 0;
-  font-size: 3em;
-  text-align: left;
-  margin-bottom: 1em;
+/* Logo */
+.logo {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 5em;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.logo::after {
+  content: "TOP10";
+}
+
+.logo:hover::after {
+  content: "";
+}
+.logo:hover::before {
+  content: "";
+  animation: strobe 1s infinite alternate;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
   font-family: "Anton SC", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-h1 {
-  font-family: "Anton SC", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+h2 {
+  margin-top: 0;
+  font-size: 3em;
+  text-align: left;
+  margin-bottom: 1em;
 }
 
 h3 {
@@ -94,35 +98,36 @@ h3 {
   margin-bottom: 2em;
 }
 
-section p {
-  margin: 0 10% 5%;
+p {
+  font-size: 1.2em;
 }
 
+/* Sections */
 section {
   padding: 5% 10%;
+}
+
+section p {
+  margin: 0 10% 5%;
 }
 
 section h2 {
   color: #f000d0;
 }
+
 .black-section {
   background-color: black;
   color: white;
 }
 
-.black-section h2 {
+.black-section h2,
+.black-section h3 {
   text-align: right;
   color: #fff;
+  animation: color-switch 300ms infinite alternate;
 }
 
-footer {
-  padding: 20px 100px;
-  margin: 0;
-}
-.album-art #middle {
-  animation: bobbing 2s infinite alternate;
-}
-
+/* Album Art */
 .album-art {
   display: flex;
   justify-content: space-between;
@@ -136,31 +141,34 @@ footer {
   box-shadow: 0px 5px 5px #888888;
 }
 
-.logo::after {
-  content: "TOP10";
+.album-art #middle {
+  animation: bobbing 2s infinite alternate;
 }
 
-.logo:hover::after {
-  content: "";
+/* Separator */
+.separate {
+  height: 5em;
+  background: linear-gradient(
+    171deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(240, 0, 208, 1) 100%
+  );
 }
 
-.logo:hover::before {
-  content: "";
-  animation: strobe 1s infinite alternate;
+/* Footer */
+footer {
+  padding: 20px 100px;
+  margin: 0;
 }
 
-.black-section h2,
-.black-section h3 {
-  animation: color-switch 300ms infinite alternate;
-}
-
+/* Animations */
 @keyframes strobe {
   0% {
-    content: "TOPTEN";
+    content: "TOP + TEN";
     opacity: 1;
   }
   100% {
-    content: "TOP10";
+    content: "TEN * TOP";
     opacity: 1;
   }
 }
@@ -169,7 +177,6 @@ footer {
   0% {
     color: #fff;
   }
-
   100% {
     color: #e0e0e0;
   }
@@ -182,13 +189,5 @@ footer {
   }
   50% {
     transform: translateY(-7px);
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .logo {
-    font-size: 2.8em;
-    padding-right: 20px;
-    padding-top: 20px;
   }
 }
