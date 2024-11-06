@@ -126,6 +126,7 @@ section h2 {
   rotate: 2deg;
   text-align: center;
   animation: bobbing 4s infinite alternate-reverse;
+  text-shadow: 0px 5px 5px #cccccc;
 }
 
 /* Album Art */
