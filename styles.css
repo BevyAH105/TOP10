@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=IBM+Plex+Sans&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.logo {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 5em;
+  content: "TOP10";
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.separate {
+  height: 5em;
+  background: #f000d0;
+  background: linear-gradient(
+    171deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(240, 0, 208, 1) 100%
+  );
+}
+
+p {
+  font-size: 1.2em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+
+  padding: 0 2em;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  background-image: url(img/header.jpeg);
+  background-size: 2000px;
+  background-position-y: -700px;
+  height: 100px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  background-color: #fff;
+  color: black;
+}
+
+.nav-link:hover {
+  background-color: #f000d0;
+  color: #fff;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 3em;
+  text-align: left;
+  margin-bottom: 1em;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 1.8em;
+  margin-bottom: 2em;
+}
+
+section p {
+  margin: 0 10% 5%;
+}
+
+section {
+  padding: 5% 10%;
+}
+
+section h2 {
+  color: #f000d0;
+}
+.black-section {
+  background-color: black;
+  color: white;
+}
+
+.black-section h2 {
+  text-align: right;
+  color: #fff;
+}
+
+footer {
+  padding: 20px 100px;
+  margin: 0;
+}
+.album-art #middle {
+  animation: bobbing 2s infinite alternate;
+}
+
+.album-art {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2em;
+  animation: bobbing 2s infinite alternate;
+}
+
+.album-art img {
+  width: 25vw;
+  height: 25vw;
+  box-shadow: 0px 5px 5px #888888;
+}
+
+.logo::after {
+  content: "TOP10";
+}
+
+.logo:hover::after {
+  content: "";
+}
+
+.logo:hover::before {
+  content: "";
+  animation: strobe 1s infinite alternate;
+}
+
+.black-section h2,
+.black-section h3 {
+  animation: color-switch 300ms infinite alternate;
+}
+
+@keyframes strobe {
+  0% {
+    content: "TOPTEN";
+    opacity: 1;
+  }
+  100% {
+    content: "TOP10";
+    opacity: 1;
+  }
+}
+
+@keyframes color-switch {
+  0% {
+    color: #fff;
+  }
+
+  100% {
+    color: #e0e0e0;
+  }
+}
+
+@keyframes bobbing {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logo {
+    font-size: 2.8em;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+}
