@@ -10,14 +10,6 @@ body {
   font-style: normal;
 }
 
-@media screen and (max-width: 500px) {
-  .logo {
-    font-size: 2.8em;
-    padding-right: 20px;
-    padding-top: 20px;
-  }
-}
-
 /* Header and Navigation */
 .nav-container {
   display: flex;
@@ -130,14 +122,17 @@ section h2 {
 /* Album Art */
 .album-art {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2em;
   padding-bottom: 2em;
   animation: bobbing 2s infinite alternate;
 }
 
 .album-art img {
-  width: 25vw;
-  height: 25vw;
+  width: 16vw;
+  height: 16vw;
+  min-height: 200px;
+  min-width: 200px;
   box-shadow: 0px 5px 5px #888888;
 }
 
@@ -189,5 +184,15 @@ footer {
   }
   50% {
     transform: translateY(-7px);
+  }
+}
+
+/* Media Query */
+
+@media screen and (max-width: 500px) {
+  .logo {
+    font-size: 2.8em;
+    padding-right: 20px;
+    padding-top: 20px;
   }
 }
