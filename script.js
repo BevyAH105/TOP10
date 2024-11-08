@@ -8,7 +8,7 @@ function createObserver(wipeElement) {
   wipeElement.forEach((el) => observer.observe(el));
 }
 
-function handleIntersect(entries, observer) {
+function handleIntersect(entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("wipe-animation");
