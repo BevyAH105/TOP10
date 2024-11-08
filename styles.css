@@ -163,8 +163,16 @@ nav ul {
   box-shadow: 0px 5px 5px #888888;
 }
 
+.album-art #right {
+  rotate: -4deg;
+}
+
 .album-art #middle {
   animation: bobbing 2s infinite alternate;
+}
+
+.album-art #left {
+  rotate: 4deg;
 }
 
 /* Separator */
