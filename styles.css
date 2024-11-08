@@ -123,12 +123,6 @@ nav ul {
   animation: color-switch 300ms infinite alternate;
 }
 
-/* Algorithm Info Panel */
-.algo-info h2 {
-  text-align: right;
-  rotate: -2deg;
-}
-
 /* Hero Section*/
 
 .hero {
@@ -173,6 +167,12 @@ nav ul {
 
 .album-art #left {
   rotate: 4deg;
+}
+
+/* Algorithm Info Panel */
+.algo-info h2 {
+  text-align: right;
+  rotate: -2deg;
 }
 
 /* Separator */

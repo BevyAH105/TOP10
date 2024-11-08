@@ -17,3 +17,9 @@ function handleIntersect(entries) {
     }
   });
 }
+
+window.addEventListener("scroll", function () {
+  const scrollPosition = window.scrollY;
+  const navContainer = document.querySelector(".nav-container");
+  navContainer.style.backgroundPositionY = `${-700 + scrollPosition * 0.8}px`;
+});
