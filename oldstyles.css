@@ -11,45 +11,7 @@ body {
   color: #252525;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Anton SC", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  user-select: none;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 3em;
-  text-align: left;
-  margin-bottom: 1em;
-}
-
-h3 {
-  font-size: 1.8em;
-  margin-bottom: 2em;
-}
-
-p {
-  font-size: 1.2em;
-}
-
-/* Sections */
-section {
-  padding: 5% 10%;
-}
-
-section p {
-  margin: 0 10% 5%;
-}
-
-section h2 {
-  color: #f000d0;
-}
-
-/* Navigation */
+/* Header and Navigation */
 .nav-container {
   display: flex;
   justify-content: center;
@@ -110,7 +72,45 @@ nav ul {
   animation: strobe 1s infinite alternate;
 }
 
-/* Section Styles */
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  user-select: none;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 3em;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 1.8em;
+  margin-bottom: 2em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+/* Sections */
+section {
+  padding: 5% 10%;
+}
+
+section p {
+  margin: 0 10% 5%;
+}
+
+section h2 {
+  color: #f000d0;
+}
+
 .black-section {
   background-color: #252525;
   color: white;
@@ -123,14 +123,6 @@ nav ul {
   animation: color-switch 300ms infinite alternate;
 }
 
-/* Algorithm Info Panel */
-.algo-info h2 {
-  text-align: right;
-  rotate: -2deg;
-}
-
-/* Hero Section*/
-
 .hero {
   background: radial-gradient(
     circle,
@@ -139,7 +131,7 @@ nav ul {
   );
 }
 
-.hero h2 {
+.hero-title {
   color: #252525;
   rotate: 2deg;
   text-align: center;
@@ -147,6 +139,7 @@ nav ul {
   text-shadow: 0px 5px 5px #cccccc;
 }
 
+/* Album Art */
 .album-art {
   display: flex;
   justify-content: center;
