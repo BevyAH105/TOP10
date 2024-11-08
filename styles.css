@@ -222,6 +222,21 @@ footer {
   }
 }
 
+@keyframes wiper {
+  0% {
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.wipe-animation {
+  animation: wiper 1s 1;
+}
+
 /* Media Query */
 
 @media screen and (max-width: 500px) {
