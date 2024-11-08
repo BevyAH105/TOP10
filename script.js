@@ -1,30 +1,19 @@
-const numSteps = 20.0;
+document.addEventListener("DOMContentLoaded", (event) => {
+  const wipeElements = document.querySelectorAll(".wipe");
+  createObserver(wipeElements);
+});
 
-let wipeElement;
-
-// Set things up
-window.addEventListener(
-  "load",
-  (event) => {
-    wipeElement = document.querySelector("#wipe");
-
-    createObserver();
-  },
-  false
-);
-
-function createObserver() {
-  let observer;
-  observer = new IntersectionObserver(handleIntersect);
-  observer.observe(wipeElement);
+function createObserver(wipeElement) {
+  let observer = new IntersectionObserver(handleIntersect);
+  wipeElement.forEach((el) => observer.observe(el));
 }
 
 function handleIntersect(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      wipeElement.classList.add("wipe-animation");
+      entry.target.classList.add("wipe-animation");
     } else {
-      wipeElement.classList.remove("wipe-animation");
+      entry.target.classList.remove("wipe-animation");
     }
   });
 }
