@@ -175,6 +175,27 @@ nav ul {
   rotate: -2deg;
 }
 
+/* Call To Action */
+
+.calltoact {
+  border: none;
+  padding: auto;
+  padding: 0.5em;
+  text-align: inherit;
+  border-radius: 0;
+  appearance: none;
+  background-color: #252525;
+  color: #ffffff;
+  font-size: 3em;
+  font-family: "Anton SC", sans-serif;
+  transform: rotate(3deg);
+  margin-left: 45%;
+}
+
+.calltoact:hover {
+  background-color: #f000d0;
+}
+
 /* Separator */
 .separate {
   height: 5em;
@@ -249,5 +270,11 @@ footer {
   .logo:hover::before {
     content: "TEN10";
     animation: none;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .calltoact {
+    font-size: 1.4em;
   }
 }
