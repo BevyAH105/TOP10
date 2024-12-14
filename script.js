@@ -12,9 +12,10 @@ function handleIntersect(entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("wipe-animation");
-    } else {
-      entry.target.classList.remove("wipe-animation");
     }
+    // else {
+    //   entry.target.classList.remove("wipe-animation");
+    // }
   });
 }
 
