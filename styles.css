@@ -212,6 +212,21 @@ footer {
   margin: 0;
 }
 
+/* Sign Up Page */
+
+.sign-up h1,
+.sign-up h2,
+.sign-up h3,
+.sign-up p {
+  text-align: center;
+}
+
+.su-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
 /* Animations */
 @keyframes strobe {
   0% {
