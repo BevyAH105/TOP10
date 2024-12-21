@@ -36,6 +36,22 @@ p {
   font-size: 1.2em;
 }
 
+label {
+  font-size: 2em;
+}
+
+input {
+  padding-bottom: 1em;
+}
+
+a:link {
+  color: #f000d0;
+}
+
+a:visited {
+  color: #8b0079;
+}
+
 /* Sections */
 section {
   padding: 5% 10%;
@@ -225,6 +241,34 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 0 10%;
+  min-height: 100vh;
+}
+
+.su-btn {
+  text-decoration: none;
+  border: none;
+  padding: auto;
+  padding: 0.5em;
+  text-align: inherit;
+  border-radius: 0;
+  appearance: none;
+  background-color: #252525;
+  color: #ffffff;
+  font-family: "Anton SC", sans-serif;
+  font-size: 1.3em;
+}
+
+.su-btn:hover {
+  background-color: #f000d0;
+}
+
+#su-remember {
+  font-size: 0.7em;
+}
+
+#su-title {
+  font-size: 3em;
+  animation: bobbing 2s infinite alternate, color-switch2 3s infinite alternate;
 }
 
 /* Animations */
@@ -245,6 +289,15 @@ footer {
   }
   100% {
     color: #e0e0e0;
+  }
+}
+
+@keyframes color-switch2 {
+  0% {
+    color: #000000;
+  }
+  100% {
+    color: #f000d0;
   }
 }
 
